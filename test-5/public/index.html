@@ -295,10 +295,19 @@
     </section>
     <!-- Import library here -->
     <script>
-      var libes6 = document.createElement('script');
-      libes6.async = true;
-      libes6.src = '../dist/sunmedia-es6.js';
-      document.body.appendChild(libes6)
+        var supportsES6 = function() {
+            try {
+                new Function("(a = 0) => a");
+                return true;
+            }
+            catch (err) {
+                return false;
+            }
+        }();
+      var lib = document.createElement('script');
+      lib.async = true;
+      lib.src = '../dist/sunmedia-' + (supportsES6 ? 'es6' : 'es5') + '.js';
+      document.body.appendChild(lib)
     </script>
     <!-- ./Import -->
 </body>

@@ -7,7 +7,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "build:es5": "webpack --config webpack.es5.js",
     "build:es6": "webpack --config webpack.es6.js",
-    "server:start": "webpack-dev-server --open --config webpack.dev.js"
+    "server:start": "webpack-dev-server --host 0.0.0.0 --open --config webpack.dev.js"
   },
   "keywords": [],
   "author": {
@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.0.6",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",

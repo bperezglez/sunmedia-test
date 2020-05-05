@@ -1,5 +1,7 @@
-const target = document.getElementById('sunmedia');
-/**
+import createVideoElement from './createVideoElement.js';
+import onInsertVideoWhenTargetIsVisible from './onInsertVideoWhenTargetIsVisible.js';
+
+const target = document.getElementById('sunmedia');/**
  *
  * @param {string} src The video media file url
  * @return {HTMLVideoElement}
@@ -9,4 +11,5 @@ const videoElm = createVideoElement('https://vod.addevweb.com/sunmedia/demos/v/n
  * @param {HTMLDivElement} targetElm
  * @param {HTMLVideoElement} videoElm
  */
-onInsertVideoWhenTargetIsVisible(target, videoElm);
+
+ onInsertVideoWhenTargetIsVisible(target, videoElm);
