@@ -4,7 +4,7 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -12,8 +12,15 @@
     "@babel/core": "^7.0.0-beta.42",
     "@babel/preset-env": "^7.0.0-beta.42",
     "@babel/preset-es2015": "^7.0.0-beta.42",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.0.0-beta.2",
+    "jest": "^26.0.1",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test).{js,jsx,mjs}"
+    ]
   }
 }
